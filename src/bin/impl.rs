@@ -8,6 +8,13 @@ impl Temperature {
             celsius: 0.0,
         }
     }
+
+    fn boil() -> Self {
+        Self {
+            celsius: 100.0,
+        }
+    }
+
     fn show_celsius(&self) {
         println!("The temperature is {} degrees Celsius", self.celsius);
     }
@@ -17,6 +24,10 @@ fn main(){
         celsius: 22.5,
     };
     temp.show_celsius();
+
     let cold: Temperature = Temperature::freeze();
     cold.show_celsius();
+    
+    let hot: Temperature = Temperature::boil();
+    hot.show_celsius();
 }
