@@ -1,7 +1,7 @@
 fn main() {
-    let a = 2;
-    let b = 3;
-    let sum = add(a, b);
+    let a: i32 = 2;
+    let b: i32 = 3;
+    let sum: i32 = add(a, b);
     display_result(a, b, sum);
 }
 

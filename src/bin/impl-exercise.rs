@@ -3,14 +3,13 @@ enum Color {
     Red,
 }
 
-impl  Color {
+impl Color {
     fn show(&self) {
         match self {
             Color::Brown => println!("The color is Brown"),
             Color::Red => println!("The color is Red"),
         }
     }
-    
 }
 
 struct Dimension {
@@ -21,7 +20,10 @@ struct Dimension {
 
 impl Dimension {
     fn show(&self) {
-        println!("The height is {}, width is {}, depth is {}", self.height, self.width, self.depth);
+        println!(
+            "The height is {}, width is {}, depth is {}",
+            self.height, self.width, self.depth
+        );
     }
 }
 
@@ -32,7 +34,7 @@ struct ShippingBox {
 }
 
 impl ShippingBox {
-    fn new(color: Color, weight: f64, dimensions : Dimension) -> Self {
+    fn new(color: Color, weight: f64, dimensions: Dimension) -> Self {
         Self {
             color,
             weight,
@@ -44,8 +46,6 @@ impl ShippingBox {
         println!("The weight is {}", self.weight);
         self.dimensions.show();
     }
-
-  
 }
 
 fn main() {
@@ -54,7 +54,7 @@ fn main() {
         width: 5.0,
         depth: 5.0,
     };
-    let small_box: ShippingBox = ShippingBox::new(Color::Brown, 5.0, small_dimension); 
+    let small_box: ShippingBox = ShippingBox::new(Color::Brown, 5.0, small_dimension);
     small_box.print();
 
     let large_dimension: Dimension = Dimension {
