@@ -5,7 +5,8 @@ enum Access {
     Guest,
 }
 fn main() {
-    let access_level: Access = Access::Guest;
+    //! secret file: admins only
+    let access_level: Access = Access::Admin;
     let can_access: bool = match access_level {
         Access::Admin => true,
         _ => false,
