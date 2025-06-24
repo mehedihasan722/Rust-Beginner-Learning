@@ -14,7 +14,7 @@ fn get_choice(input: &str) -> Result<MenuChoice, String> {
 }
 
 fn main() {
-    let choices: [&'static str; 3] = ["mainmenu", "start", "quit"];
+    let choices: [&'static str; 4] = ["mainmenu", "start", "quit", "ghd"];
     for choice in &choices {
         match get_choice(choice) {
             Ok(MenuChoice::MainMenu) => println!("You chose the main menu."),
